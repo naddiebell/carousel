@@ -1,9 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './catData';
+import CatData from './catData';
 
 function App() {
   return (
+    <div>
+      <CatData />
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,6 +23,7 @@ function App() {
           Learn React today yaaay!
         </a>
       </header>
+    </div>
     </div>
   );
 }
