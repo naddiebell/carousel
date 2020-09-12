@@ -1,6 +1,11 @@
 import React from "react";
 
 const Filmstrip = (props) => {
+
+    console.log('propsphoto', props.photoArr)
+
+  
+
   return (
     <div className="Filmstrip">
       <div className="Box Box1">

@@ -6,18 +6,15 @@ import Filmstrip from './Filmstrip';
 
 function App() {
 
-  const [state, setState] = useState([]);
+  const [photoArray, setphotoArray] = useState([]);
   
   React.useEffect(() => {
     
     fetch("https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=04798704e9e3c86362c64d3fe2f5eedc&gallery_id=58061135-72157626529791195&format=json&nojsoncallback=1")
     .then(response => response.json())
-    .then(data => setState(data.photos.photo));
+    .then(data => setphotoArray(data.photos.photo));
     
     },[])
-
-  /*const {state, setstate, photoArray} = props;
-  console.log("state", state);*/
 
   return (
     <div>
@@ -26,7 +23,7 @@ function App() {
         <div className="SearchDiv">
         </div>
       </div>
-     <Filmstrip />
+     <Filmstrip photoArr={photoArray}/>
       
     </div>
   );
