@@ -2,27 +2,18 @@ import React from "react";
 
 const Filmstrip = (props) => {
 
-    console.log('propsphoto', props.photoArr)
-
+        let photoArray= props.photoArr
+        //console.log(`https://farm${photoArray[0].farm}.staticflickr.com/${photoArray[0].server}/${photoArray[0].id}_${photoArray[0].secret}.jpg`) 
+    
+    
+   
+    
   
 
   return (
     <div className="Filmstrip">
-      <div className="Box Box1">
-        {" "}
-        <img
-          src={
-            "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*"
-          }
-        />
-      </div>
-
-      <div className="Box Box2"></div>
-      <img />
-      <div className="Box Box3"></div>
-      <img />
-      <div className="Box Box4"></div>
-      <img />
+       {photoArray.map(element => <div className="Box"><img src={`https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}.jpg`}/></div>)} 
+      
     </div>
   );
 };
