@@ -4,26 +4,35 @@ import './App.css';
 import './catData';
 import CatData from './catData';
 
-function App() {
+
+
+
+
+
+
+
+function App(props) {
+  const {state, setstate, photoArray} = props;
+  console.log("hello");
+
   return (
     <div>
-      <CatData />
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React today yaaay!
-        </a>
-      </header>
-    </div>
+      <div className="Background">
+        <CatData />
+        <div className="SearchDiv">
+        </div>
+      </div>
+      <div className="Filmstrip">
+        <div className="Box Box1"></div>
+          <img src="" />
+        <div className="Box Box2"></div>
+          <img />
+        <div className="Box Box3"></div>
+          <img />
+        <div className="Box Box4"></div>
+          <img />
+
+      </div>
     </div>
   );
 }
