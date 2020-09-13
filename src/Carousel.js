@@ -6,9 +6,9 @@ function Carousel(props) {
   const handleLeftClick = props.handleLeftClick;
   const handleRightClick = props.handleRightClick
 
-  console.log("Picture", picture);
+ 
   if (picture !== "The photo is not available") {
-    console.log(picture);
+   
   }
 
   return (

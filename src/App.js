@@ -9,21 +9,21 @@ function App() {
 
   const [photoArray, setphotoArray] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [apiLink, setApiLink] = useState([]);
 
-  React.useEffect(() => {
-    
-    fetch("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=dogs&format=json&nojsoncallback=1")
-    .then(response => response.json())
-    .then(data => setphotoArray(data.photos.photo));
-    
-    },[])
+  
 
     function handleSearch (param) {
-      console.log(param)
+      if (param !== ""){
+        
+        fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=${param}&format=json&nojsoncallback=1`)
+        .then(response => response.json())
+        .then(data => setphotoArray(data.photos.photo))
 
+      }
     }
 
+
+    
    
     
     function Picture () {
