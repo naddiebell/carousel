@@ -3,11 +3,17 @@ import logo from './logo.svg';
 import './App.css';
 import Filmstrip from './Filmstrip';
 import Carousel from './Carousel'
+import Search from './SearchForm'
 
 function App() {
 
   const [photoArray, setphotoArray] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [apiLink, setApiLink] = useState([]);
+
+  function handleSearch () {
+    
+  }
   
   React.useEffect(() => {
     
@@ -38,7 +44,9 @@ function App() {
 
   return (
     <div>
-      
+      <div>
+      <Search />
+      </div>
         <Carousel value={Picture()} handleLeftClick={handleLeftClick} handleRightClick={handleRightClick}/>
       
       <div className="Background">
