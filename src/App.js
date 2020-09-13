@@ -7,6 +7,7 @@ import Carousel from './Carousel'
 function App() {
 
   const [photoArray, setphotoArray] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   React.useEffect(() => {
     
@@ -21,15 +22,24 @@ function App() {
       if(photoArray.length === 0){
         return "The photo is not available"
       } else {
-        return photoArray[0]
+        return photoArray[currentImageIndex]
       }
+    }
+
+    function handleLeftClick () {
+      
+      setCurrentImageIndex(currentImageIndex-1)
+    }
+
+    function handleRightClick () {
+      setCurrentImageIndex(currentImageIndex+1)
     }
 
 
   return (
     <div>
       
-        <Carousel value={Picture()}/>
+        <Carousel value={Picture()} handleLeftClick={handleLeftClick} handleRightClick={handleRightClick}/>
       
       <div className="Background">
         
