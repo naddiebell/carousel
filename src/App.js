@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from './logo.svg';
 import './App.css';
 import Filmstrip from './Filmstrip';
-
+import Carousel from './Carousel'
 
 function App() {
 
@@ -18,6 +18,9 @@ function App() {
 
   return (
     <div>
+      
+        <Carousel photoArr={photoArray}/>
+      
       <div className="Background">
         
         <div className="SearchDiv">
