@@ -16,10 +16,20 @@ function App() {
     
     },[])
 
+    
+    function Picture () {
+      if(photoArray.length === 0){
+        return "The photo is not available"
+      } else {
+        return photoArray[0]
+      }
+    }
+
+
   return (
     <div>
       
-        <Carousel photoArr={photoArray}/>
+        <Carousel value={Picture()}/>
       
       <div className="Background">
         
