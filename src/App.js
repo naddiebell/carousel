@@ -11,7 +11,7 @@ function App() {
   
   React.useEffect(() => {
     
-    fetch("https://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=04798704e9e3c86362c64d3fe2f5eedc&gallery_id=58061135-72157626529791195&format=json&nojsoncallback=1")
+    fetch("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=dogs&format=json&nojsoncallback=1")
     .then(response => response.json())
     .then(data => setphotoArray(data.photos.photo));
     
