@@ -11,10 +11,6 @@ function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [apiLink, setApiLink] = useState([]);
 
-  function handleSearch () {
-    
-  }
-  
   React.useEffect(() => {
     
     fetch("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=dogs&format=json&nojsoncallback=1")
@@ -23,6 +19,12 @@ function App() {
     
     },[])
 
+    function handleSearch (param) {
+      console.log(param)
+
+    }
+
+   
     
     function Picture () {
       if(photoArray.length === 0){
@@ -45,7 +47,7 @@ function App() {
   return (
     <div>
       <div>
-      <Search />
+      <Search handleSearch={handleSearch} />
       </div>
         <Carousel value={Picture()} handleLeftClick={handleLeftClick} handleRightClick={handleRightClick}/>
       
