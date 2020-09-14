@@ -7,9 +7,10 @@ const Filmstrip = (props) => {
 
   return (
     <div className="Filmstrip">
-      {photoArray.map((element, index) => (
-        <div>
-         <div key={index} ></div>
+      {photoArray.filter(element => element.server !=="0").map((element, index) => {
+          return (
+        <div key={index} >
+        
         <div className="Box">
           <img
             src={`https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}.jpg`}
@@ -18,7 +19,7 @@ const Filmstrip = (props) => {
           />
         </div>
         </div>
-      ))}
+        )})}
     </div>
   );
 };
