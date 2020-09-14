@@ -5,17 +5,21 @@ const Filmstrip = (props) => {
   let setCurrentImageIndex = props.value;
   let showCarousel= props.showCarousel;
 
+ 
+
   return (
     <div className="Filmstrip">
       {photoArray.filter(element => element.server !=="0").map((element, index) => {
           return (
         <div key={index} >
-        
         <div className="Box">
           <img
             src={`https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}.jpg`}
-            onClick={() => setCurrentImageIndex(index)}
-            onClick={() => showCarousel()}
+            onClick={() => (
+            setCurrentImageIndex(index),
+            showCarousel()
+            )}
+            
           />
         </div>
         </div>
