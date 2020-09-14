@@ -3,7 +3,7 @@ import React from "react";
 const Filmstrip = (props) => {
 
         let photoArray= props.photoArr
-        console.log("heeeeeeee", photoArray)
+        
     
 
   return (

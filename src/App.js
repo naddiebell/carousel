@@ -22,6 +22,12 @@ function App() {
       }
     }
 
+    
+      const handleKeyDown = (event) => {
+        handleSearch(event)
+      }
+    
+
 
     
    
@@ -47,7 +53,7 @@ function App() {
   return (
     <div>
       <div>
-      <Search handleSearch={handleSearch} />
+      <Search handleSearch={handleSearch} handleKeyDown={handleKeyDown} />
       </div>
         <Carousel value={Picture()} handleLeftClick={handleLeftClick} handleRightClick={handleRightClick}/>
       
