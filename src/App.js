@@ -15,7 +15,7 @@ function App() {
     function handleSearch (param) {
       if (param !== ""){
         
-        fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=${param}&format=json&nojsoncallback=1`)
+        fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=${param}&per_page=8&format=json&nojsoncallback=1`)
         .then(response => response.json())
         .then(data => setphotoArray(data.photos.photo))
 
@@ -57,6 +57,7 @@ function App() {
         </div>
       </div>
      <Filmstrip photoArr={photoArray}/>
+     
       
     </div>
   );

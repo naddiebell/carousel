@@ -3,12 +3,8 @@ import React from "react";
 const Filmstrip = (props) => {
 
         let photoArray= props.photoArr
-        //console.log(`https://farm${photoArray[0].farm}.staticflickr.com/${photoArray[0].server}/${photoArray[0].id}_${photoArray[0].secret}.jpg`) 
+        console.log("heeeeeeee", photoArray)
     
-    
-   
-    
-  
 
   return (
     <div className="Filmstrip">
