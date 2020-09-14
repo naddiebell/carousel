@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 function Carousel(props) {
+    const [displayCarousel, setDisplayCarousel] = useState(false);
+
   let picture = props.value;
   const handleLeftClick = props.handleLeftClick;
   const handleRightClick = props.handleRightClick;
+
+
 
   if (picture !== "The photo is not available") {
   }
 
   return (
+      <div>
+      {displayCarousel && (
     <div className="CarouselBackgroundDiv">
       <div className="Button left" onClick={() => handleLeftClick()}>
         x
@@ -26,6 +32,8 @@ function Carousel(props) {
       <div className="Button right" onClick={() => handleRightClick()}>
         x
       </div>
+    </div>
+      )}
     </div>
   );
 }
