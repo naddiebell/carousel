@@ -3,6 +3,7 @@ import React from "react";
 const Filmstrip = (props) => {
   let photoArray = props.photoArr;
   let setCurrentImageIndex = props.value;
+  let showCarousel= props.showCarousel;
 
   return (
     <div className="Filmstrip">
@@ -13,6 +14,7 @@ const Filmstrip = (props) => {
           <img
             src={`https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}.jpg`}
             onClick={() => setCurrentImageIndex(index)}
+            onClick={() => showCarousel()}
           />
         </div>
         </div>

@@ -10,7 +10,7 @@ function Search(props) {
       <input
         className="Searchbox"
         type="text"
-        placeholder="What do you want to see?"
+        placeholder="I am feeling lucky"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onKeyDown={(event) =>

@@ -8,6 +8,7 @@ import Search from "./SearchForm";
 function App() {
   const [photoArray, setphotoArray] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [displayCarousel, setDisplayCarousel] = useState(false);
 
   function handleSearch(param) {
     if (param !== "") {
@@ -19,9 +20,31 @@ function App() {
     }
   }
 
+ 
+
+  function showCarousel() {
+    setDisplayCarousel(!displayCarousel)
+    console.log(displayCarousel);
+  }
+
+ 
+
+
   const handleKeyDown = (event) => {
     handleSearch(event);
   };
+
+  function handleLeftClick() {
+    if (currentImageIndex > 0) {
+      setCurrentImageIndex(currentImageIndex - 1);
+    }
+  }
+
+  function handleRightClick() {
+    if (currentImageIndex + 1 < photoArray.length) {
+      setCurrentImageIndex(currentImageIndex + 1);
+    }
+  }
 
   function Picture() {
     if (photoArray.length === 0) {
@@ -31,29 +54,27 @@ function App() {
     }
   }
 
-  function handleLeftClick() {
-    setCurrentImageIndex(currentImageIndex - 1);
-  }
-
-  function handleRightClick() {
-    setCurrentImageIndex(currentImageIndex + 1);
-  }
-
   return (
+
     <div>
       <div>
         <Search handleSearch={handleSearch} handleKeyDown={handleKeyDown} />
       </div>
+      {displayCarousel && (
       <Carousel
         value={Picture()}
         handleLeftClick={handleLeftClick}
         handleRightClick={handleRightClick}
+        
       />
+      )}
 
       <div className="Background">
         <div className="SearchDiv"></div>
       </div>
-      <Filmstrip photoArr={photoArray} value={setCurrentImageIndex}/>
+      <Filmstrip photoArr={photoArray} 
+      value={setCurrentImageIndex}  
+      showCarousel={showCarousel} />
     </div>
   );
 }

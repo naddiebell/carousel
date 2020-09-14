@@ -15,7 +15,7 @@ function Carousel(props) {
 
   return (
       <div>
-      {displayCarousel && (
+      
     <div className="CarouselBackgroundDiv">
       <div className="Button left" onClick={() => handleLeftClick()}>
         x
@@ -33,7 +33,7 @@ function Carousel(props) {
         x
       </div>
     </div>
-      )}
+      
     </div>
   );
 }
