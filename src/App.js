@@ -13,18 +13,39 @@ function App() {
   const [displayCarousel, setDisplayCarousel] = useState(false);
   const [displayLoader, setDisplayLoader] = useState(false);
   
+  
 
   function handleSearch(param) {
     if (param !== "") {
       setDisplayLoader(true)
       fetch(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=${param}&per_page=8&format=json&nojsoncallback=1`
+        `https://api.unsplash.com/search/photos?query=${param}&client_id=Wot0T-RckMuAxjpXihnU-LIT4VB_5fFbgzbhAA1oLlM&page=1&per_page=8https://api.unsplash.com/search/photos?query=dogs&client_id=Wot0T-RckMuAxjpXihnU-LIT4VB_5fFbgzbhAA1oLlM&page=1&per_page=8`
       )
         .then((response) => response.json())
-        .then((data) => setphotoArray(data.photos.photo));
-        //setTimeout(setDisplayLoader(false), 2000)
+        .then((data) => (data.results))
+        .then((resultsArray)=> {
+          let photos = resultsArray.map(element => element.urls.regular)
+          setphotoArray(photos) 
+        }
+
+        );
+  
     }
   }
+  /*
+ function arrayOfPhotos() {
+    if(photoArrayObjects.length >0){
+    let photos = photoArrayObjects.map(element => element.urls.regular)
+    setphotoArray(photos)
+  
+
+
+ }}
+ */
+    
+
+console.log("llllll", photoArray)
+ 
 
   function showCarousel() {
     setDisplayCarousel(true);
@@ -85,3 +106,10 @@ function App() {
 }
 
 export default App;
+
+
+/*
+ fetch(
+        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=${param}&per_page=8&format=json&nojsoncallback=1`
+      )
+*/

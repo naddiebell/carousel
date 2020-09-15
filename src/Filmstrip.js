@@ -9,7 +9,7 @@ const Filmstrip = (props) => {
 
   return (
     <div className="Filmstrip">
-      {photoArray.filter(element => element.server !=="0").map((element, index) => {
+      {photoArray.map((element, index) => {
           return (
         <div key={index} >
         <div className="Box">
