@@ -23,7 +23,7 @@ function App() {
  
 
   function showCarousel() {
-    setDisplayCarousel(!displayCarousel)
+    setDisplayCarousel(true)
     console.log(displayCarousel);
   }
 

@@ -17,6 +17,7 @@ const Filmstrip = (props) => {
             src={`https://farm${element.farm}.staticflickr.com/${element.server}/${element.id}_${element.secret}.jpg`}
             onClick={() => (
             setCurrentImageIndex(index),
+            showCarousel(),
             showCarousel()
             )}
             
