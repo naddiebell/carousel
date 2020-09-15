@@ -11,8 +11,6 @@
   display: inline-block;
   display: flex;
   flex-wrap: wrap;
- 
-  
 }
 
 .Box {
@@ -25,29 +23,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
-
-
 }
-
 
 .Box img {
   max-width: 100%;
-  max-height:100%;
+  max-height: 100%;
 }
 
 .CarouselBackgroundDiv {
-  height: 40rem;
+  height: 35rem;
   width: 50%;
   background: gray;
   margin: auto;
   display: flex;
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
-  
+  position: relative;
 }
 
 .Button {
@@ -55,6 +47,7 @@
   display: inline-block;
   text-align: center;
   margin: 0 auto;
+  position: relative;
   
 
   height: 80px;
@@ -62,30 +55,30 @@
 }
 
 .Button left {
+  
 }
 
 .Button right {
   float: right;
-  position: absolute;
-
-
+  
 }
 
 .LargeImage {
-  height: 500px;
-  width: 800px;
+  height: auto;
+  width: 90%;
   background: rgb(85, 34, 34);
+  flex-shrink: inherit;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
-
-
 }
 
 .photo {
   max-width: 100%;
   height: auto;
-  
-
+  margin: 1%;
 }
 
 .Search {
@@ -94,10 +87,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
 }
 
 .Searchbox {
- margin-top: 20%;
+  margin-top: 20%;
 }

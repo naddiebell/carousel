@@ -21,7 +21,7 @@ function Carousel(props) {
         x
       </div>
 
-      <div className="LargeImage">
+      <div className="LargeImage HoldImage">
         {picture !== "The photo is not available" && (
           <img
             className="photo"

@@ -22,7 +22,7 @@ function App() {
       )
         .then((response) => response.json())
         .then((data) => setphotoArray(data.photos.photo));
-      //setDisplayLoader(false)
+        //setTimeout(setDisplayLoader(false), 2000)
     }
   }
 
