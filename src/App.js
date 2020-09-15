@@ -4,31 +4,32 @@ import "./App.css";
 import Filmstrip from "./Filmstrip";
 import Carousel from "./Carousel";
 import Search from "./SearchForm";
+import Loader from "./loading";
+
 
 function App() {
   const [photoArray, setphotoArray] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [displayCarousel, setDisplayCarousel] = useState(false);
+  const [displayLoader, setDisplayLoader] = useState(false);
+  
 
   function handleSearch(param) {
     if (param !== "") {
+      setDisplayLoader(true)
       fetch(
         `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=${param}&per_page=8&format=json&nojsoncallback=1`
       )
         .then((response) => response.json())
         .then((data) => setphotoArray(data.photos.photo));
+      //setDisplayLoader(false)
     }
   }
 
- 
-
   function showCarousel() {
-    setDisplayCarousel(true)
+    setDisplayCarousel(true);
     console.log(displayCarousel);
   }
-
- 
-
 
   const handleKeyDown = (event) => {
     handleSearch(event);
@@ -55,26 +56,30 @@ function App() {
   }
 
   return (
-
     <div>
       <div>
         <Search handleSearch={handleSearch} handleKeyDown={handleKeyDown} />
       </div>
       {displayCarousel && (
-      <Carousel
-        value={Picture()}
-        handleLeftClick={handleLeftClick}
-        handleRightClick={handleRightClick}
-        
-      />
+        <Carousel
+          value={Picture()}
+          handleLeftClick={handleLeftClick}
+          handleRightClick={handleRightClick}
+        />
       )}
+      {displayLoader && (
+        <Loader />
+      )}
+
 
       <div className="Background">
         <div className="SearchDiv"></div>
       </div>
-      <Filmstrip photoArr={photoArray} 
-      value={setCurrentImageIndex}  
-      showCarousel={showCarousel} />
+      <Filmstrip
+        photoArr={photoArray}
+        value={setCurrentImageIndex}
+        showCarousel={showCarousel}
+      />
     </div>
   );
 }

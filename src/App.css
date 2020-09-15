@@ -19,8 +19,12 @@
   background: black;
   height: 240px;
   width: 220px;
-  margin: 40px;
+  margin: 5%;
+  padding: 2%;
   justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
   
 
@@ -70,9 +74,17 @@
 .LargeImage {
   height: 500px;
   width: 800px;
-  background: black;
+  background: rgb(85, 34, 34);
   position: relative;
-  margin: 0 auto;
+  
+
+
+}
+
+.photo {
+  max-width: 100%;
+  height: auto;
+  
 
 }
 

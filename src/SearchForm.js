@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import Loader from "./loading.js"
 
 function Search(props) {
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearch = props.handleSearch;
   const handleKeyDown = props.handleKeyDown;
+
+  
 
   return (
     <div className="Search">
@@ -22,6 +25,7 @@ function Search(props) {
       >
         Search
       </button>
+      
     </div>
   );
 }

@@ -24,6 +24,7 @@ function Carousel(props) {
       <div className="LargeImage">
         {picture !== "The photo is not available" && (
           <img
+            className="photo"
             src={`https://farm${picture.farm}.staticflickr.com/${picture.server}/${picture.id}_${picture.secret}.jpg`}
           />
         )}
