@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Filmstrip from "./Filmstrip";
 import Carousel from "./Carousel";
@@ -7,29 +6,32 @@ import Search from "./SearchForm";
 import Loader from "./loading";
 
 
+
+
+
 function App() {
   const [photoArray, setphotoArray] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [displayCarousel, setDisplayCarousel] = useState(false);
   const [displayLoader, setDisplayLoader] = useState(false);
+  const [clear, setClear]= useState(false)
   
   
 
   function handleSearch(param) {
     if (param !== "") {
-      setDisplayLoader(true)
+      setDisplayLoader(true);
       fetch(
         `https://api.unsplash.com/search/photos?query=${param}&client_id=Wot0T-RckMuAxjpXihnU-LIT4VB_5fFbgzbhAA1oLlM&page=1&per_page=8https://api.unsplash.com/search/photos?query=dogs&client_id=Wot0T-RckMuAxjpXihnU-LIT4VB_5fFbgzbhAA1oLlM&page=1&per_page=8`
       )
         .then((response) => response.json())
-        .then((data) => (data.results))
-        .then((resultsArray)=> {
-          let photos = resultsArray.map(element => element.urls.regular)
-          setphotoArray(photos) 
-        }
-
-        );
-  
+        .then((data) => data.results)
+        .then((resultsArray) => {
+          let photos = resultsArray.map((element) => element.urls.regular);
+          setphotoArray(photos);
+        })
+        .then(()=> setDisplayLoader(false))
+        .then(()=> setDisplayLoader(false))
     }
   }
  
@@ -61,9 +63,25 @@ function App() {
       return photoArray[currentImageIndex];
     }
   }
+
+
+  function handleWindow() {
+    setDisplayCarousel(false)
+    setphotoArray([])
+  }
+
+
+  //document.body.addEventListener("onClick", handleWindow())
+
+
+
+
+
+
+
 console.log("picture",Picture());
   return (
-    <div>
+    <div className="background">
       <div>
         <Search handleSearch={handleSearch} handleKeyDown={handleKeyDown} />
       </div>
@@ -80,7 +98,7 @@ console.log("picture",Picture());
       )}
 
 
-      <div className="Background">
+      <div>
         <div className="SearchDiv"></div>
       </div>
       <Filmstrip
