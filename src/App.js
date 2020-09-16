@@ -32,21 +32,7 @@ function App() {
   
     }
   }
-  /*
- function arrayOfPhotos() {
-    if(photoArrayObjects.length >0){
-    let photos = photoArrayObjects.map(element => element.urls.regular)
-    setphotoArray(photos)
-  
-
-
- }}
- */
-    
-
-console.log("llllll", photoArray)
  
-
   function showCarousel() {
     setDisplayCarousel(true);
     console.log(displayCarousel);
@@ -75,7 +61,7 @@ console.log("llllll", photoArray)
       return photoArray[currentImageIndex];
     }
   }
-
+console.log("picture",Picture());
   return (
     <div>
       <div>
@@ -88,6 +74,7 @@ console.log("llllll", photoArray)
           handleRightClick={handleRightClick}
         />
       )}
+      
       {displayLoader && (
         <Loader />
       )}
@@ -109,7 +96,9 @@ export default App;
 
 
 /*
- fetch(
-        `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=04798704e9e3c86362c64d3fe2f5eedc&text=${param}&per_page=8&format=json&nojsoncallback=1`
-      )
+{displayCarousel && (
+      <div className="gallery">
+        <Filmstrip/>
+      </div>
+      )}
 */

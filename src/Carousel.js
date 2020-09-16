@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Filmstrip from "./Filmstrip"
 
 function Carousel(props) {
     const [displayCarousel, setDisplayCarousel] = useState(false);
@@ -8,7 +9,7 @@ function Carousel(props) {
   const handleLeftClick = props.handleLeftClick;
   const handleRightClick = props.handleRightClick;
 
-
+  
 
   if (picture !== "The photo is not available") {
   }
@@ -17,21 +18,26 @@ function Carousel(props) {
       <div>
       
     <div className="CarouselBackgroundDiv">
-      <div className="Button left" onClick={() => handleLeftClick()}>
-        x
+      <div className="Buttonleft" onClick={() => handleLeftClick() }>
+      {"<"}
+        
       </div>
 
-      <div className="LargeImage HoldImage">
+      <div className="LargeImage">
         {picture !== "The photo is not available" && (
           <img
             className="photo"
-            src={`https://farm${picture.farm}.staticflickr.com/${picture.server}/${picture.id}_${picture.secret}.jpg`}
+            src={picture}
           />
         )}
       </div>
 
-      <div className="Button right" onClick={() => handleRightClick()}>
-        x
+      <div className="Buttonright" onClick={() => handleRightClick()}>
+        {">"}
+      </div>
+      <div className="Gallery">
+          
+
       </div>
     </div>
       
