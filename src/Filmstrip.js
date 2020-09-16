@@ -2,7 +2,7 @@ import React from "react";
 
 const Filmstrip = (props) => {
   let photoArray = props.photoArr;
-  let setCurrentImageIndex = props.value;
+  let setCurrentImageIndex = props.setCurrentImageIndex;
   let showCarousel= props.showCarousel;
 
  

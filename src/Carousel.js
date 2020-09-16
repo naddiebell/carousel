@@ -8,6 +8,9 @@ function Carousel(props) {
   let picture = props.value;
   const handleLeftClick = props.handleLeftClick;
   const handleRightClick = props.handleRightClick;
+  const photoArray= props.photoArr;
+  const setCurrentImageIndex=props.setCurrentImageIndex;
+  const showCarousel= props.showCarousel;
 
   
 
@@ -36,6 +39,12 @@ function Carousel(props) {
         {">"}
       </div>
       <div className="Gallery">
+          <Filmstrip 
+            photoArr={photoArray}
+        setCurrentImageIndex={setCurrentImageIndex}
+        showCarousel={showCarousel}
+          />
+
           
 
       </div>

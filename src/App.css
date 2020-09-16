@@ -1,3 +1,9 @@
+.background{
+  background: whitesmoke;
+  height: 100%;
+  z-index: 1;
+}
+
 .filmBackground{
   display: flex;
   width: 100%;
@@ -8,9 +14,9 @@
 }
 
 .Filmstrip {
-  background: whitesmoke;
+  
   height: 17rem;
-  width: 90%;
+  width: 100%;
   display: inline-block;
   display: flex;
   flex-wrap: wrap;
@@ -37,7 +43,7 @@
 .CarouselBackgroundDiv {
   height: 35rem;
   width: 45%;
-  background: black;
+  background: lightblue;
   margin: auto;
   display: flex;
   text-align: center;
@@ -116,5 +122,4 @@
 
 .Gallery {
 
-  max-height: 10rem;
 }

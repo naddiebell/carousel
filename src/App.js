@@ -5,18 +5,12 @@ import Carousel from "./Carousel";
 import Search from "./SearchForm";
 import Loader from "./loading";
 
-
-
-
-
 function App() {
   const [photoArray, setphotoArray] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [displayCarousel, setDisplayCarousel] = useState(false);
   const [displayLoader, setDisplayLoader] = useState(false);
-  const [clear, setClear]= useState(false)
-  
-  
+  const [clear, setClear] = useState(false);
 
   function handleSearch(param) {
     if (param !== "") {
@@ -30,11 +24,11 @@ function App() {
           let photos = resultsArray.map((element) => element.urls.regular);
           setphotoArray(photos);
         })
-        .then(()=> setDisplayLoader(false))
-        .then(()=> setDisplayLoader(false))
+        .then(() => setDisplayLoader(false))
+        .then(() => setDisplayLoader(false));
     }
   }
- 
+
   function showCarousel() {
     setDisplayCarousel(true);
     console.log(displayCarousel);
@@ -64,46 +58,40 @@ function App() {
     }
   }
 
-
   function handleWindow() {
-    setDisplayCarousel(false)
-    setphotoArray([])
+    console.log("hello");
+    setDisplayCarousel(false);
+    setphotoArray([]);
   }
 
+  /*useEffect( () => {
+  document.body.addEventListener("onClick", handleWindow())
+}
 
-  //document.body.addEventListener("onClick", handleWindow())
+) */
 
-
-
-
-
-
-
-console.log("picture",Picture());
   return (
     <div className="background">
       <div>
         <Search handleSearch={handleSearch} handleKeyDown={handleKeyDown} />
       </div>
       {displayCarousel && (
-        <Carousel
-          value={Picture()}
-          handleLeftClick={handleLeftClick}
-          handleRightClick={handleRightClick}
-        />
-      )}
       
-      {displayLoader && (
-        <Loader />
+          <Carousel
+            value={Picture()}
+            handleLeftClick={handleLeftClick}
+            handleRightClick={handleRightClick}
+            photoArr={photoArray}
+            setCurrentImageIndex={setCurrentImageIndex}
+            showCarousel={showCarousel}
+          />
+       
       )}
 
-
-      <div>
-        <div className="SearchDiv"></div>
-      </div>
+      {displayLoader && <Loader />}
       <Filmstrip
         photoArr={photoArray}
-        value={setCurrentImageIndex}
+        setCurrentImageIndex={setCurrentImageIndex}
         showCarousel={showCarousel}
       />
     </div>
@@ -111,7 +99,6 @@ console.log("picture",Picture());
 }
 
 export default App;
-
 
 /*
 {displayCarousel && (
