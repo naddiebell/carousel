@@ -64,11 +64,6 @@ function App() {
     setphotoArray([]);
   }
 
-  /*useEffect( () => {
-  document.body.addEventListener("onClick", handleWindow())
-}
-
-) */
 
   return (
     <div className="background">
@@ -100,10 +95,4 @@ function App() {
 
 export default App;
 
-/*
-{displayCarousel && (
-      <div className="gallery">
-        <Filmstrip/>
-      </div>
-      )}
-*/
+
