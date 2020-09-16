@@ -21,11 +21,6 @@ function Carousel(props) {
       <div>
       
     <div className="CarouselBackgroundDiv">
-      <div className="Buttonleft" onClick={() => handleLeftClick() }>
-      {"<"}
-        
-      </div>
-
       <div className="LargeImage">
         {picture !== "The photo is not available" && (
           <img
@@ -34,20 +29,34 @@ function Carousel(props) {
           />
         )}
       </div>
-
-      <div className="Buttonright" onClick={() => handleRightClick()}>
-        {">"}
-      </div>
       <div className="Gallery">
+
+      <div className="Buttonleft" onClick={() => handleLeftClick() }>
+      {"<"}
+        
+      </div>
+      <div>
           <Filmstrip 
             photoArr={photoArray}
         setCurrentImageIndex={setCurrentImageIndex}
         showCarousel={showCarousel}
           />
-
+     </div>
+     <div className="Buttonright" onClick={() => handleRightClick()}>
+        {">"}
+      </div>
           
 
       </div>
+
+
+
+     
+
+      
+
+      
+     
     </div>
       
     </div>
