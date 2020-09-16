@@ -12,8 +12,7 @@ const Filmstrip = (props) => {
     <div className="Filmstrip">
       {photoArray.map((element, index) => {
           return (
-        <div key={index} >
-        <div className="Box">
+        <div className="Box" key={index}>
           <img
             src={element}
             onClick={() => (
@@ -23,7 +22,6 @@ const Filmstrip = (props) => {
             )}
             
           />
-        </div>
         </div>
         )})}
     </div>
