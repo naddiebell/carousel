@@ -11,6 +11,7 @@ function Carousel(props) {
   const photoArray= props.photoArr;
   const setCurrentImageIndex=props.setCurrentImageIndex;
   const showCarousel= props.showCarousel;
+  const handleWindow = props.handleWindow
 
   
 
@@ -21,6 +22,12 @@ function Carousel(props) {
       <div>
       
     <div className="CarouselBackgroundDiv">
+    <div 
+      className="exitButton"
+      onClick={() => handleWindow()}
+      >
+      x
+    </div>
       <div className="LargeImage">
         {picture !== "The photo is not available" && (
           <img

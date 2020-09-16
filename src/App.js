@@ -79,6 +79,7 @@ function App() {
             photoArr={photoArray}
             setCurrentImageIndex={setCurrentImageIndex}
             showCarousel={showCarousel}
+            handleWindow = {handleWindow}
           />
        
       )}
