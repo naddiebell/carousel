@@ -1,15 +1,18 @@
 .background{
   background: whitesmoke;
   height: 100%;
+  
   z-index: 1;
 }
 
 .exitButton {
   position: absoulte;
   top: 0;
-  right: 0;
+  left: 0;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  width: 10px;
+  margin: 2px;
 }
 
 .filmBackground{
