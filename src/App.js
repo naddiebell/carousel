@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Filmstrip from "./Filmstrip";
 import Carousel from "./Carousel";
@@ -10,7 +10,6 @@ function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [displayCarousel, setDisplayCarousel] = useState(false);
   const [displayLoader, setDisplayLoader] = useState(false);
-  const [clear, setClear] = useState(false);
 
   function handleSearch(param) {
     if (param !== "") {

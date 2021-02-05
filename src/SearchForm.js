@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Loader from "./loading.js"
 
 function Search(props) {
   const [searchTerm, setSearchTerm] = useState("");

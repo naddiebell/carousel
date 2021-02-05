@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import Filmstrip from "./Filmstrip"
 
 function Carousel(props) {
-    const [displayCarousel, setDisplayCarousel] = useState(false);
 
   let picture = props.value;
   const handleLeftClick = props.handleLeftClick;
@@ -33,6 +32,7 @@ function Carousel(props) {
           <img
             className="photo"
             src={picture}
+            alt=""
           />
         )}
       </div>
