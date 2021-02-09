@@ -1,18 +1,24 @@
 /* eslint-disable no-sequences */
 import React from "react";
+import "./miniFilmstrip.css"
 
-const Filmstrip = (props) => {
+const MiniFilmstrip = (props) => {
   let photoArray = props.photoArr;
   let setCurrentImageIndex = props.setCurrentImageIndex;
   let showCarousel = props.showCarousel;
+  const styles = {
+      height: '40px',
+      width: '25px',
+  };
 
   return (
-    <div className="filmBackground">
-      <div className="Filmstrip">
+    <div className="miniFilmBackground">
+      <div className="miniFilmstrip">
         {photoArray.map((element, index) => {
           return (
-            <div className="Box" key={index}>
+            <div className="miniBox" key={index}>
               <img
+                style={styles}
                 src={element}
                 alt=""
                 onClick={() => (
@@ -30,4 +36,4 @@ const Filmstrip = (props) => {
   );
 };
 
-export default Filmstrip;
+export default MiniFilmstrip;

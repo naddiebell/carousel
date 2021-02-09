@@ -1,0 +1,35 @@
+
+.miniFilmstrip {
+  
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: whitesmoke;
+    
+  }
+
+  .miniFilmBackground{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    overflow: hidden;
+    justify-content: center;
+  }
+
+  .miniBox {
+    background: whitesmoke;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    padding: 5px;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid gray;
+    z-index: 10;
+  }
