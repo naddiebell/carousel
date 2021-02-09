@@ -16,6 +16,7 @@
 
 .closeButton {
   margin: 3px;
+  cursor: pointer;
 }
 
 .filmBackground{
@@ -55,6 +56,7 @@
 
 .Box:hover {
   filter: drop-shadow(3px 3px 3px #44d);
+  cursor: pointer;
 }
 
 .Box img {
@@ -92,6 +94,7 @@ box-shadow: 15px -17px 11px -14px rgba(0,0,0,0.75);
   width: 80px;
   color: white;
   font-size: 3em;
+  cursor: pointer;
 }
 
 .Buttonright {
@@ -106,11 +109,8 @@ box-shadow: 15px -17px 11px -14px rgba(0,0,0,0.75);
   width: 80px;
   color: white;
   font-size: 3em;
-  
-  
-  
- 
-  
+  cursor: pointer;
+
 }
 
 .LargeImage {
