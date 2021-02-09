@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./searchForm.css";
 
 function Search(props) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -12,7 +13,7 @@ function Search(props) {
       <input
         className="Searchbox"
         type="text"
-        placeholder="I am feeling lucky"
+        placeholder="Search for cool pics!"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         onKeyDown={(event) =>

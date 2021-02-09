@@ -134,6 +134,8 @@ box-shadow: 15px -17px 11px -14px rgba(0,0,0,0.75);
 
 .Searchbox {
   margin-top: 20%;
+  margin-right: 20px;
+  font-size: 1.5rem;
 }
 
 

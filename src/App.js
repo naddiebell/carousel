@@ -58,7 +58,6 @@ function App() {
   }
 
   function handleWindow() {
-    console.log("hello");
     setDisplayCarousel(false);
     setphotoArray([]);
   }
