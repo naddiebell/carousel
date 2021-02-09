@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 import "./carousel.css"
 import Filmstrip from "./Filmstrip";
-import MiniFilmstrip from "./MiniFilmstrip"
 import Carousel from "./Carousel";
 import Search from "./SearchForm";
 import Loader from "./loading";

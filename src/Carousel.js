@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import "./carousel.css"
-import Filmstrip from "./Filmstrip";
 import MiniFilmstrip from "./MiniFilmstrip"
 import { FaTimes } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
@@ -35,15 +34,6 @@ function Carousel(props) {
           <div className="Buttonleft" onClick={() => handleLeftClick()}>
             <FaArrowAltCircleLeft />
           </div>
-          {/* <div>
-            <Filmstrip
-              className="miniFilmstrip"
-              photoArr={photoArray}
-              setCurrentImageIndex={setCurrentImageIndex}
-              showCarousel={showCarousel}
-            />
-          </div> */}
-           {/* <div className="smallFilmstrip"> */}
               <MiniFilmstrip
               photoArr={photoArray}
               setCurrentImageIndex={setCurrentImageIndex}

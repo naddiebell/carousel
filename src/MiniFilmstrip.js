@@ -8,7 +8,7 @@ const MiniFilmstrip = (props) => {
   let showCarousel = props.showCarousel;
   const styles = {
       height: '40px',
-      width: '25px',
+      width: '40px',
   };
 
   return (
