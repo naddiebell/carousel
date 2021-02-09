@@ -74,8 +74,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 30%;
-  top: 30%;
+  left: 25%;
+  top: 20%;
   /* overflow: hidden; */
   -webkit-box-shadow: 15px -17px 11px -14px rgba(0,0,0,0.75);
 -moz-box-shadow: 15px -17px 11px -14px rgba(0,0,0,0.75);
@@ -83,7 +83,6 @@ box-shadow: 15px -17px 11px -14px rgba(0,0,0,0.75);
 }
 
 .Buttonleft {
-  background: black;
   display: inline-block;
   text-align: center;
   margin: 0 auto;
@@ -95,10 +94,10 @@ box-shadow: 15px -17px 11px -14px rgba(0,0,0,0.75);
   color: white;
   font-size: 3em;
   cursor: pointer;
+  z-index: 15;
 }
 
 .Buttonright {
-  background: black;
   display: inline-block;
   text-align: center;
   margin: 0 auto;
@@ -110,7 +109,7 @@ box-shadow: 15px -17px 11px -14px rgba(0,0,0,0.75);
   color: white;
   font-size: 3em;
   cursor: pointer;
-
+  z-index: 15;
 }
 
 .LargeImage {
